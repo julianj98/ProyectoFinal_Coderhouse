@@ -1,0 +1,14 @@
+<h1>Detalles del Usuario</h1>
+<p>Nombre: {{user.first_name}}</p>
+<p>Apellido: {{user.last_name}}</p>
+<p>Correo: {{user.email}}</p>
+<p>Rol: {{user.rol}}</p>
+<a href="/admin/users" class="btn btn-primary">Volver</a>
+<form action="/admin/users/{{user._id}}/edit" method="POST">
+  <label for="newRole">Nuevo Rol:</label>
+  <select name="newRole" id="newRole">
+    <option value="user">User</option>
+    <option value="premium">Premium</option>
+  </select>
+  <button type="submit" class="btn btn-primary">Modificar Rol</button>
+</form>

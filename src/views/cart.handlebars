@@ -1,0 +1,31 @@
+<h1>Carrito</h1>
+
+<h2>ID del Carrito: {{cart._id}}</h2>
+<!-- Mostrar otros detalles del carrito -->
+
+<h3>Productos:</h3>
+<ul>
+  {{#each products}}
+  <li>
+    <h4>{{this.product.title}}</h4>
+    <p>Descripcion: {{this.product.description}}</p>
+    <P>Categoria: {{this.product.category}}</P>
+    <p>Precio: {{this.product.price}}</p>
+    <p>Cantidad: {{this.quantity}}</p> 
+    <button class="btn btn-danger" data-product-id="{{this.product._id}}" data-cart-id="{{../cart._id}}" data-product-title="{{this.product.title}}">Eliminar del Carrito</button>
+
+  </li>
+  {{/each}}
+</ul>
+
+<a href="/products" class="btn btn-primary">Volver a Productos</a>
+
+<!-- Mostrar el total del carrito -->
+<h3>Total del Carrito: {{totalCartPrice}}</h3>
+
+<!-- Agregar un botón para finalizar la compra -->
+{{#if products.length}}
+<button id="finalizarCompraButton" class="btn btn-primary" data-cart-id="{{cart._id}}">Finalizar Compra</button>
+{{/if}}
+<script src="/js/finalizePurchase.js"></script>
+<script src="/js/removeFromCart.js"></script>

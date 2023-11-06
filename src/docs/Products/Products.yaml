@@ -1,0 +1,159 @@
+tags:
+  - name: Productos
+    description: Endpoints relacionados con productos
+paths:
+  /api/products/:
+    get:
+      summary: Obtener todos los productos.
+      description: Obtiene una lista de todos los productos disponibles.
+      responses:
+        200:
+          description: Lista de productos.
+        500:
+          description: Error interno del servidor.
+      tags:
+        - Productos
+    post:
+      summary: Crear un nuevo producto.
+      description: Crea un nuevo producto.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: "producto prueba 19"
+                description:
+                  type: string
+                  example: "Este es un producto prueba 19"
+                code:
+                  type: string
+                  example: "abc19"
+                price:
+                  type: number
+                  example: 100
+                stock:
+                  type: integer
+                  example: 10
+                status:
+                  type: boolean
+                  example: true
+                category:
+                  type: string
+                  example: "tech"
+                thumbnail:
+                  type: string
+                  example: "sim imagen"
+              required:
+                - title
+                - description
+                - code
+                - price
+                - status
+                - stock
+                - category
+                - thumbnail
+      responses:
+        201:
+          description: El producto se crea con éxito.
+        400:
+          description: Solicitud incorrecta o faltan campos obligatorios.
+        500:
+          description: Error interno del servidor.
+      tags:
+        - Productos
+
+  /api/products/{id}:
+    get:
+      summary: Obtener un producto por ID.
+      description: Obtiene un producto por su ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: ID del producto que se desea obtener.
+          schema:
+            type: string
+      responses:
+        200:
+          description: El producto se devuelve con éxito.
+        404:
+          description: El producto no se encuentra.
+        500:
+          description: Error interno del servidor.
+      tags:
+        - Productos
+    put:
+      summary: Actualizar un producto por ID.
+      description: Actualiza un producto existente por su ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: ID del producto que se desea actualizar.
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: "producto prueba 19"
+                description:
+                  type: string
+                  example: "Este es un producto prueba 19"
+                code:
+                  type: string
+                  example: "abc19"
+                price:
+                  type: number
+                  example: 100
+                stock:
+                  type: integer
+                  example: 10
+                status:
+                  type: boolean
+                  example: true
+                category:
+                  type: string
+                  example: "tech"
+                thumbnail:
+                  type: string
+                  example: "sim imagen"
+      responses:
+        200:
+          description: El producto se actualiza con éxito.
+        400:
+          description: Solicitud incorrecta o faltan campos obligatorios.
+        404:
+          description: El producto no se encuentra.
+        500:
+          description: Error interno del servidor.
+      tags:
+        - Productos
+    delete:
+      summary: Eliminar un producto por ID.
+      description: Elimina un producto existente por su ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: ID del producto que se desea eliminar.
+          schema:
+            type: string
+      responses:
+        200:
+          description: El producto se elimina con éxito.
+        404:
+          description: El producto no se encuentra.
+        500:
+          description: Error interno del servidor.
+      tags:
+        - Productos

@@ -1,0 +1,29 @@
+<h1>Administración de Usuarios</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Correo</th>
+      <th>Rol</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+    <tr>
+      <td>{{first_name}}</td>
+      <td>{{last_name}}</td>
+      <td>{{email}}</td>
+      <td>{{rol}}</td>
+      <td>
+        <a href="/admin/users/{{_id}}" class="btn btn-primary">Ver</a>
+        <a href="/admin/users/{{_id}}/delete" class="btn btn-danger">Eliminar</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<div>
+  <a href="/products" id="volver-productos" style="margin-bottom: 20px;" class="btn btn-primary">Volver a Productos</a>
+</div>
