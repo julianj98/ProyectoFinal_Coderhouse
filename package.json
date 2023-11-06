@@ -10,7 +10,8 @@
     "prod": "set NODE_ENV=production&& nodemon ./src/app.js",
     "test-products": "mocha test/products.test.js",
     "test-carts": "mocha test/carts.test.js",
-    "test-sessions": "mocha test/sessions.test.js"
+    "test-sessions": "mocha test/sessions.test.js",
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",

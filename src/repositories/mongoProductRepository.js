@@ -1,5 +1,5 @@
 import ProductManager from "../dao/mongo/manager/products.js";
-import ProductRepository from "./Products.repository.js";
+import ProductRepository from "./products.repository.js";
 
 class MongoProductRepository extends ProductRepository {
   constructor() {
