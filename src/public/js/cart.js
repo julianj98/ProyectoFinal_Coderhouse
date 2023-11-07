@@ -1,5 +1,5 @@
 function addToCart(productId, productTitle,) {
-  const quantity = 1; // Puedes ajustar la cantidad según tus necesidades
+  const quantity = 1;
   // Realiza una solicitud POST al servidor para agregar el producto al carrito
   fetch(`/api/carts/${cartId}/product/${productId}`, {
     method: 'POST',

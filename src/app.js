@@ -164,9 +164,9 @@ app.get('/loggerTest', (req, res) => {
 
 
 export {io};
-//VISTAS: VISUALIZAR PRODUCTO - AGREGAR AL CARRITO - VISUALIZAR CARRITO - FINALIZAR COMPRA
-//NOTA: visualizar producto ya estaria y agregar al carrito ya esta el boton
+
 //ENDPOINTS
+//localhost:8080/api/users
 // formato de los documents    ['document-identificacion .docx', 'document-comprobante-de-domicilio.docx', 'document-comprobante-de-estado-de-cuenta.docx'];
 // id que puede usar de ejemplo: 652f2a192b5757623ef48a29 , mail enzof@mail.com
 //localhost:8080/api/sessions/resetpassword para enviar el mail (pasar en postman el user y pass de ethereal email)

@@ -1,7 +1,6 @@
 <h1>Carrito</h1>
 
 <h2>ID del Carrito: {{cart._id}}</h2>
-<!-- Mostrar otros detalles del carrito -->
 
 <h3>Productos:</h3>
 <ul>
@@ -23,7 +22,6 @@
 <!-- Mostrar el total del carrito -->
 <h3>Total del Carrito: {{totalCartPrice}}</h3>
 
-<!-- Agregar un botón para finalizar la compra -->
 {{#if products.length}}
 <button id="finalizarCompraButton" class="btn btn-primary" data-cart-id="{{cart._id}}">Finalizar Compra</button>
 {{/if}}

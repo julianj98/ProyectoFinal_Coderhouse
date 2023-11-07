@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const finalizeCompraButton = document.getElementById("finalizarCompraButton");
     finalizeCompraButton.addEventListener("click", function() {
-      const cartId = finalizeCompraButton.getAttribute("data-cart-id"); // Obtén el ID del carrito desde el atributo de datos
+      const cartId = finalizeCompraButton.getAttribute("data-cart-id"); 
       finalizeCompra(cartId);
     });
     console.log(cartId);
